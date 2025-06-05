@@ -1,0 +1,180 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #000000;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #34495e;
+    border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2c3e50;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Conteúdo */
+.intro {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Centralizar conteúdo das seções principais */
+.content-section,
+.main-security-types,
+.specialized-areas,
+.comparison-section,
+.career-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 10px;
+}
+
+/* Centralizar os cards e grids */
+.security-types-container,
+.areas-grid,
+.career-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* Ajustar largura dos cards para centralizar melhor */
+.security-type-card,
+.area-card,
+.career-card {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 24px 16px;
+    margin: 10px 0;
+    min-width: 220px;
+    max-width: 320px;
+    flex: 1 1 260px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* Centralizar tabela de comparação */
+.comparison-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 12px 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.comparison-section h2,
+.comparison-section p {
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .dropdown-content {
+        position: static;
+    }
+}
